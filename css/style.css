@@ -1,0 +1,178 @@
+nav {
+    background-color: rgb(252, 252, 252);
+    width: 100%;
+    overflow: auto;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: rgb(179, 67, 179);
+    color: white;
+    padding: 10px;
+    margin: auto;
+}
+
+body{
+	padding: 10px;
+    margin: 10px;
+	background-color: rgb(255, 208, 196);
+	font-size: 125%;
+    font-family: 'Varela Round', 'Lucida Sans Regular', 'Lucida Grande';
+}
+
+h1{
+    font-size: 150%;
+    font-family: 'Varela Round', 'Lucida Sans Regular', 'Lucida Grande';
+    text-align: center;
+    padding: 20px 0px 10px 0px;
+    margin: 10px;
+}
+
+h2{
+    font-size: 130%;
+}
+
+dt{
+    font-size: 130%;
+    font-family: 'Varela Round', 'Lucida Sans Regular', 'Lucida Grande';
+
+}
+
+dl{
+    padding: 20px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+    border: 10px white solid;
+    border-radius: 23px 0 23px 0;
+    border-color: white;
+}
+
+.intro {
+    animation-name: intro_pic;
+    animation-duration: 4s;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.active{
+    color:rgb(179, 67, 179);
+    border: 5px dotted;
+    text-transform: uppercase;
+}
+
+img:hover {
+    border: 8px solid rgb(179, 67, 179);
+    border-radius: 23px 0 23px 0;
+}
+
+
+.skip {
+    position: absolute;
+    left: -1000px;
+}
+
+.skip:focus {
+    left: 0px;
+}
+
+p {
+    padding: 10px;
+}
+
+.dictionary {
+    background-image: url('../images/parchment.jpg');
+}
+.dictionary body {
+    background-color: transparent;
+}
+.dict_content {
+    display: flex;
+    flex-direction: column;
+    columns: 1fr 3fr;
+    column-gap: 15px;
+    margin: 50px 0px 50px 0px;
+    padding: 20px;
+    background-color: rgba(255, 228, 196, 0.506) ;
+}
+
+.index {
+    display: flex;
+    margin: 30px 0px 30px 0;
+    padding: 20px;
+    background-color: rgb(255, 222, 213);
+
+}
+
+.typing {
+    color: black;
+    overflow: hidden;
+    border-right: .10em solid #2a2323;;
+    white-space: nowrap;
+    margin: 10px auto ;
+    letter-spacing: .4rem;
+    animation: demo-typewriter 4s steps(30, end), demo-cursor 1s step-end infinite;
+  }
+  @keyframes demo-typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%
+    }
+  }
+  @keyframes demo-cursor {
+    from, to {
+      border-color: transparent;
+  }
+    50% {
+  border-color: #2a2323;
+    }
+  }
+
+@keyframes intro_pic {
+    0% { opacity: 0;}
+    100% { opacity: 1}
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .intro {
+        animation: none;
+    }
+    .typing {
+        animation: none;
+    }
+}
+
+@media screen and (min-width: 481px){
+    nav li{
+        display: inline-block
+    }
+}
+
+@media screen and (min-width: 850px){
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 20px;
+    }
+    .dict_content {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+
+    }
+
+}
